@@ -11,7 +11,7 @@ DBPREFIX="prfx_"
 JOOMLAVERSION="3.7.1"
 
 rm -f /var/www/html/index.html
-apt-get install unzip wget
+apt-get install -y unzip wget
 wget https://github.com/joomla/joomla-cms/releases/download/$JOOMLAVERSION/Joomla_$JOOMLAVERSION-Stable-Full_Package.zip -P /var/tmp/
 unzip /var/tmp/Joomla_$JOOMLAVERSION-Stable-Full_Package.zip -d /var/www/html/
 cd /var/www/html/
