@@ -1,7 +1,8 @@
 Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777", "fmode=777"]
   config.ssh.username = "ubuntu"
-  config.ssh.password = "351c01df686107b15b6f6ec5"
+  config.ssh.insert_key = true
+  # config.ssh.password = "351c01df686107b15b6f6ec5"
   config.vm.provision "shell", inline: <<-SHELL
     rm -rf /docker-attach
     mkdir /vagrant/html
