@@ -8,12 +8,12 @@ Vagrant.configure("2") do |config|
         j.args = ['3.7.2','prfx_','qweasd','admin','joomla_db','jdbuser','dbupass']
     end
     config.vm.provision :shell, path: "attach/fix_htaccess.sh"
-    # config.vm.provision :shell, path: "attach/setup_codeception.sh"
-    # config.vm.provision :shell, path: "attach/setup_phantomjs.sh"
-    # config.vm.provision :shell, path: "attach/prepare_codeception.sh"
-    # config.vm.provision "shell", inline: "ifconfig | grep 'inet addr'"
+    config.vm.provision :shell, path: "attach/setup_codeception.sh"
+    config.vm.provision :shell, path: "attach/setup_phantomjs.sh"
+    config.vm.provision :shell, path: "attach/prepare_codeception.sh"
+    config.vm.provision "shell", inline: "ifconfig | grep 'inet addr'"
     # config.vm.provision "shell", inline: "chown -R ubuntu:www-data /var/www/html/"
-    # config.vm.provision :shell, path: "attach/cleanup.sh"
+    config.vm.provision :shell, path: "attach/cleanup.sh"
     # config.vm.synced_folder ".", "/vagrant", disabled: true
     config.vm.synced_folder "./attach", "/docker-attach"
     # config.ssh.insert_key = true

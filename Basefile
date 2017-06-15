@@ -3,12 +3,12 @@ Vagrant.configure("2") do |config|
   config.ssh.username = "ubuntu"
   config.ssh.password = "351c01df686107b15b6f6ec5"
   config.vm.provision "shell", inline: <<-SHELL
-    ll /
-  #  mv /var/www/html /vagrant/html
-  #  rm -f /var/www/html
-  #  ln -s /vagrant/html /var/www/html
-  #  mv /var/www/composer/tests /vagrant/tests
-  #  rm -f /var/www/composer/tests
-  #  ln -s /vagrant/tests /var/www/composer/tests
+    mv /var/www/html /vagrant/html
+    rm -f /var/www/html
+    ln -s /vagrant/html /var/www/html
+    mv /var/www/composer/tests /vagrant/tests
+    rm -f /var/www/composer/tests
+    ln -s /vagrant/tests /var/www/composer/tests
   SHELL
+  config.vm.provision "shell", inline: "ifconfig | grep 'inet addr'"
 end
