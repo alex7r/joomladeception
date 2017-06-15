@@ -21,4 +21,4 @@ EOF
 update-rc.d phantomjs defaults
 service phantomjs start
 cd /var/www/composer/
-php composer.phar require jonnyw/php-phantomjs:2.*
+composer require jonnyw/php-phantomjs:2.*
