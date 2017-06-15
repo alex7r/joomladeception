@@ -2,12 +2,12 @@ Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/xenial64"
     # config.vm.network "public_network"
     # config.vm.network "private_network", ip: "192.168.33.222"
-    # config.vm.provision :shell, path: "attach/setup_host.sh"
-    # config.vm.provision :shell do |j|
-    #     j.path = "attach/setup_joomla.sh"
-    #     j.args = ['3.7.2','prfx_','qweasd','admin','joomla_db','jdbuser','dbupass']
-    # end
-    # config.vm.provision :shell, path: "attach/fix_htaccess.sh"
+    config.vm.provision :shell, path: "attach/setup_host.sh"
+    config.vm.provision :shell do |j|
+        j.path = "attach/setup_joomla.sh"
+        j.args = ['3.7.2','prfx_','qweasd','admin','joomla_db','jdbuser','dbupass']
+    end
+    config.vm.provision :shell, path: "attach/fix_htaccess.sh"
     # config.vm.provision :shell, path: "attach/setup_codeception.sh"
     # config.vm.provision :shell, path: "attach/setup_phantomjs.sh"
     # config.vm.provision :shell, path: "attach/prepare_codeception.sh"
