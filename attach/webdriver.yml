@@ -1,0 +1,4 @@
+        - WebDriver:
+            url: 'http://localhost/'
+            port: 8190
+            browser: phantomjs
