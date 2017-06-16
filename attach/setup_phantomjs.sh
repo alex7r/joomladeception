@@ -13,7 +13,7 @@ ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/share/phantomjs
 ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin/phantomjs
 ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/bin/phantomjs
 rm -fr $PHANTOM_JS.tar.bz2
-cp /docker-attach/phantomjs /etc/init.d/phantomjs
+tr -d '\r' < /docker-attach/phantomjs > /etc/init.d/phantomjs
 chmod +x /etc/init.d/phantomjs
 cat << EOF > /etc/default/phantomjs
 WEBDRIVER_PORT=8190
