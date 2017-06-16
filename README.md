@@ -1,9 +1,21 @@
 # JoomlaDeception
-Packaging command:
 
-`vagrant package --output BOXNAME.box --vagrantfile Basefile`
+Development Edition
+
+`vagrant init thealex7r/joomladeception-dev; vagrant up`
+
+## Packaging:
+
+Blackbox
+
+`vagrant package --output jdeception-blackbox.box --vagrantfile Blackbox`
+
+Development
+
+`vagrant package --output jdeception-dev.box --vagrantfile Dev`
 
 ## BuildRun codeception tests
+
 Just run `acceptence_test`
 
 ##### Codeception documentation
