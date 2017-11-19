@@ -8,9 +8,9 @@ Vagrant.configure("2") do |config|
     mv /var/www/html /vagrant
     rm -rf /var/www/html
     ln -s /vagrant/html /var/www/html
-    mv /var/www/composer/tests /vagrant/
-    rm -rf /var/www/composer/tests
-    ln -s /vagrant/tests /var/www/composer/tests
+    # mv /var/www/composer/tests /vagrant/
+    # rm -rf /var/www/composer/tests
+    # ln -s /vagrant/tests /var/www/composer/tests
   SHELL
   config.vm.provision "shell", inline: "ifconfig | grep 'inet addr'"
 end
