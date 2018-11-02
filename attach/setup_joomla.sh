@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 JUSERID=$[ ( $RANDOM % 100 )  + 1 ]
-JUSERNAME="admin"
-JUSEREMAIL="admin@localhost.com"
-JUSERPASS="qweasd"
-DB="joomla_db"
-DBUSER="jdbuser"
-DBPASS="dbupass"
-DBPREFIX="prfx_"
-JOOMLAVERSION="3.7.1"
+JUSERNAME=${4:-"admin"}
+JUSEREMAIL="${JUSERNAME}@localhost.com"
+JUSERPASS=${3:-"qweasd"}
+DB=${5:-"joomla_db"}
+DBUSER=${6:-"jdbuser"}
+DBPASS=${7:-"dbupass"}
+DBPREFIX=${2:-"prfx_"}
+JOOMLAVERSION=${1:-"3.7.1"}
 
 rm -f /var/www/html/index.html
 apt-get install -y unzip wget

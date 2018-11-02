@@ -1,0 +1,4 @@
+*.sh -lf
+Vagrantfile -lf
+Basefile -lf
+Dockerfile -lf
